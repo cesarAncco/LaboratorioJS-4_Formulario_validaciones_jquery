@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Validaciones</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row p-5">
+        <div class="mx-auto p-4 border border-dark rounded">
+          <h1>Formulario</h1>
+          <form id="formulario">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputUsuario">Usuario:</label>
+                <input type="text" class="form-control" id="inputUsuario" name="inputUsuario" placeholder="Ingrese su usuario">
+                <div class="invalid-feedback">
+                  El usuario tiene que ser de 4 a 16 digitos y solo puede contener números, letras y guion bajo.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" class="form-control" id="inputNombre" name="inputNombre" placeholder="Ingrese su nombre">
+                <div class="invalid-feedback">
+                  El nombre tiene que contener solo letras.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputContrasena">Contraseña:</label>
+                <input type="password" class="form-control" id="inputContrasena" name="inputContrasena">
+                <div class="invalid-feedback">
+                  La contraseña tiene que tener al menos 8 caracteres entre letras, números y un caracter especial.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputRepetirContrasena">Repetir Contraseña:</label>
+                <input type="password" class="form-control" id="inputRepetirContrasena" name="inputRepetirContrasena">
+                <div class="invalid-feedback">
+                  Ambas contraseñas deben ser iguales.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputCorreo">Correo:</label>
+                <input type="text" class="form-control" id="inputCorreo" name="inputCorreo">
+                <div class="invalid-feedback">
+                  Correo Electronico no valido.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputCelular">Número de Celular:</label>
+                <input type="text" class="form-control" id="inputCelular" name="inputCelular">
+                <div class="invalid-feedback">
+                  Número de Celular no valido.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputRuc">RUC:</label>
+                <input type="text" class="form-control" id="inputRuc" name="inputRuc">
+                <div class="invalid-feedback">
+                  El RUC debe tener 11 digitos.
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputCuidad">Cuidad:</label>
+                <select id="inputCuidad" name="inputCuidad" class="form-control">
+                    <option value="" selected>Seleccione la cuidad</option>
+                    <option  value="arequipa">Arequipa</option>
+                    <option  value="cusco">Cusco</option>
+                    <option  value="lima">Lima</option>
+                </select>
+                <div class="invalid-feedback">Debe elegir una cuidad</div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputComentario">Comentario:</label>
+                <textarea class="form-control" name="inputComentario" id="inputComentario"></textarea>
+                <div class="invalid-feedback">
+                  El comentario no puede estar vacio.
+                </div>
+              </div>
+              <!-- <div class="form-group col-md-4">
+                <input type="radio" id="inputMasculino" name="inputGenero" value="Masculino">
+                <label for="inputMasculino">Masculino</label>
+                <input type="radio" id="inputFemenino" name="inputGenero" value="Femenino">
+                <label for="inputFemenino">Femenino</label>
+                <div class="invalid-feedback">Debe elegir un opcion</div>
+              </div> -->
+              <div class="form-group col-md-4">
+                <label for="inputImagen">Imágen</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputImagen" name="inputImagen">
+                    <label class="custom-file-label" for="inputImagen">Seleccionar Archivo</label>
+                </div>
+                <div class="invalid-feedback">Debe elegir una imagen</div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/formulario_validacion.js"></script>
+
+  </body>
+</html>
